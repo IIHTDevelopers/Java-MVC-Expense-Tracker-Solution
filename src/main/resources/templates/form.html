@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="topnav">
+      <a th:href="@{/}">Form</a>
+      <a th:href="@{/expenses}">Expenses</a>
+    </div>
+    <div class="container">
+      <h2> Expense Form </h2>
+      <form method="post" th:object="${expense}" th:action="@{/handleSubmit}">
+        <h5>Description :  <input type="text" placeholder="Description" th:field="*{description}">
+          <span style="color:red" th:errors="*{description}"> </span></h5><br>
+
+        <h5>Amount : <input type="number" placeholder="Amount" th:field="*{amount}">
+          <span style="color:red" th:errors="*{amount}"> </span></h5><br>
+
+        <h5>Month : <input type="number" placeholder="Month" th:field="*{month}">
+          <span style="color:red" th:errors="*{month}"> </span></h5><br>
+
+        <h5>Year :<input type="number" placeholder="Year" th:field="*{year}">
+          <span style="color:red" th:errors="*{year}"> </span></h5><br>
+        <input type="hidden" th:field="*{id}">
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+</body>
+</html>
