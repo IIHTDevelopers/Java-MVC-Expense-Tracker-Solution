@@ -2,7 +2,7 @@
 	mvn clean package -Dmaven.test.skip
 
 * To launch your application, move into the target folder (cd target). Run the following command to run the application:
-	java -jar springboot-expense-tracker-0.0.1-SNAPSHOT.jar
+	java -jar springboot-expense-tracker-0.0.1-SNAPSHOT.war
 
 * Default credentials for MySQL:
 	Username: root
